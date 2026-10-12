@@ -1,0 +1,105 @@
+# Smoke Suite
+
+[← Test case index](../README.md)
+
+**56 test cases.** Run on every deployment, before any other suite. The smoke suite answers one question: *can EM still bill, collect and report money?* Every case is P1, Active and automatable, with a happy path. Run them in stage order: later stages reuse data created by earlier ones (apartment, contact, accounts).
+
+**Exit rule:** any failure stops the pipeline. Fix it, or roll back the build, before running E2E or regression.
+
+Data-driven cases (with variants) run **only the base row** in smoke. The full variant set runs in regression.
+
+## 1 · Access
+
+| # | ID | Test case | Feature | Automation |
+|---|---|---|---|---|
+| 1 | [AUTH-001](../features/01-login.md#-auth-001--login-with-valid-credentials-lands-on-dashboard) | ★ Login with valid credentials lands on dashboard | Login & Authentication | Auto-UI |
+| 2 | [API-001](../features/26-api.md#-api-001--get-access-token-with-valid-client-credentials) | ★ Get access token with valid client credentials | External API | Auto-API |
+| 3 | [API-002](../features/26-api.md#-api-002--access-token-is-not-issued-for-invalid-credentials-401) | ★ Access token is not issued for invalid credentials (401) | External API | Auto-API |
+
+## 2 · Setup & master data
+
+| # | ID | Test case | Feature | Automation |
+|---|---|---|---|---|
+| 1 | [SET-003](../features/23-settings.md#-set-003--edit-uo-pricing-unit-price-and-verify-new-uo-invoices-are-charged-at-the-new-rate) | ★ Edit UO pricing unit price and verify new UO invoices are charged at the new rate | Settings (master data & configuration) | Auto-UI+API |
+| 2 | [CBA-001](../features/15-cash-bank-account.md#cba-001--create-cash-account-with-initial-balance-balance-shown-in-account-list) | Create Cash account with initial balance; balance shown in account list | Cash & Bank Account | Auto-UI+API |
+| 3 | [APT-001](../features/08-apartments.md#-apt-001--create-new-apartment-zone-building-unit) | ★ Create new apartment (zone, building, unit) | Apartments | Auto-UI |
+| 4 | [CON-001](../features/09-contacts.md#-con-001--create-contact--by-id-type-nrc-passport-company-reg-no) | ★ Create contact — by ID type (NRC, Passport, Company Reg. No.) | Contacts | Auto-UI |
+
+## 3 · Billing
+
+| # | ID | Test case | Feature | Automation |
+|---|---|---|---|---|
+| 1 | [UO-001](../features/05-utility-operations-uo.md#-uo-001--create-single-uo-reading-draft-manual) | ★ Create single UO reading draft (manual) | Utility Operations (UO) — manual entry | Auto-UI+API |
+| 2 | [UO-007](../features/05-utility-operations-uo.md#-uo-007--approve-uo-draft---invoice-generated-unpaid-in-apartment) | ★ Approve UO draft - invoice generated, unpaid in apartment | Utility Operations (UO) — manual entry | Auto-UI+API |
+| 3 | [UOI-001](../features/06-uo-import.md#-uoi-001--uo-import-succeeds-in-month-after-last-reading---by-previous-reading-source) | ★ UO import succeeds in month after last reading - by previous reading source | UO Import (bulk meter readings) | Auto-UI+API |
+| 4 | [EMF-001](../features/07-estate-management-fee.md#-emf-001--create-single-em-draft-monthly-fee-x-number-of-months) | ★ Create single EM draft (monthly fee x number of months) | Estate Management Fee (EM) | Auto-UI+API |
+| 5 | [EMF-005](../features/07-estate-management-fee.md#-emf-005--approve-em-draft---debit-note-generated-unpaid-in-apartment) | ★ Approve EM draft - debit note generated, unpaid in apartment | Estate Management Fee (EM) | Auto-UI+API |
+| 6 | [EMF-007](../features/07-estate-management-fee.md#-emf-007--em-bulk-import-from-date--previous-end-date--1-creates-entries-without-approval) | ★ EM bulk import (from date = previous end date + 1) creates entries without approval | Estate Management Fee (EM) | Auto-UI+API |
+| 7 | [INV-001](../features/04-invoice-debit-note.md#-inv-001--create-generic-invoice-mmk-dated-last-month-to-today-as-draft) | ★ Create generic invoice (MMK, dated last month to today) as draft | Invoice & Debit Note | Auto-UI+API |
+| 8 | [INV-017](../features/04-invoice-debit-note.md#-inv-017--approve-invoice---ref-number-tax-included-unpaid-in-apartment) | ★ Approve invoice - ref number, tax included, unpaid in apartment | Invoice & Debit Note | Auto-UI+API |
+| 9 | [INV-020](../features/04-invoice-debit-note.md#-inv-020--create-debit-note-mmk-dated-last-month-to-today-as-draft) | ★ Create debit note (MMK, dated last month to today) as draft | Invoice & Debit Note | Auto-UI+API |
+| 10 | [INV-031](../features/04-invoice-debit-note.md#-inv-031--approve-debit-note---ref-number-unpaid-in-apartment) | ★ Approve debit note - ref number, unpaid in apartment | Invoice & Debit Note | Auto-UI+API |
+
+## 4 · Collection
+
+| # | ID | Test case | Feature | Automation |
+|---|---|---|---|---|
+| 1 | [PAY-001](../features/10-make-payment.md#-pay-001--make-full-payment-for-apartment-invoice-and-verify-soa-rv-invoice-status-and-ar) | ★ Make full payment for apartment invoice and verify SOA, RV, invoice status and AR | Make Payment | Auto-UI+API |
+| 2 | [PAY-003](../features/10-make-payment.md#-pay-003--make-partial-payment-invoice-becomes-partial-paid-and-duear-reduce) | ★ Make partial payment; invoice becomes Partial Paid and due/AR reduce | Make Payment | Auto-UI+API |
+| 3 | [PAY-005](../features/10-make-payment.md#-pay-005--pay-invoice-from-wallet-balance-wp-created-wallet-and-ar-updated) | ★ Pay invoice from wallet balance (WP created, wallet and AR updated) | Make Payment | Auto-UI+API |
+| 4 | [PAY-008](../features/10-make-payment.md#-pay-008--assign-unknown-received-rv-to-apartment-invoices-rv-and-ar-updated) | ★ Assign Unknown Received RV to apartment invoices; RV and AR updated | Make Payment | Auto-UI+API |
+| 5 | [CR-002](../features/11-cash-received.md#-cr-002--record-unknown-received-mmk-rv-listed-for-allocation-and-account-balance-increases) | ★ Record Unknown Received (MMK); RV listed for allocation and account balance increases | Cash Received (RV / Unknown / Funding) | Auto-UI+API |
+| 6 | [CR-004](../features/11-cash-received.md#-cr-004--record-funding-received-mmk-rv-in-recent-receipts-and-account-balance-increases) | ★ Record Funding Received (MMK); RV in Recent Receipts and account balance increases | Cash Received (RV / Unknown / Funding) | Auto-UI+API |
+| 7 | [APT-016](../features/08-apartments.md#-apt-016--make-full-payment-from-apartment--soa-ar-and-unpaid-total-updated) | ★ Make full payment from apartment — SOA, AR and unpaid total updated | Apartments | Auto-UI+API |
+
+## 5 · Wallet & deposit
+
+| # | ID | Test case | Feature | Automation |
+|---|---|---|---|---|
+| 1 | [WAL-001](../features/16-wallet.md#-wal-001--recharge-wallet-mmk-cash--wallet-rv-and-received-in-account-balance-increase) | ★ Recharge wallet (MMK, cash) — wallet, RV and received-in account balance increase | Wallet | Auto-UI+API |
+| 2 | [WAL-006](../features/16-wallet.md#-wal-006--transfer-wallet-balance-to-another-apartment--both-wallets-updated-wt-created) | ★ Transfer wallet balance to another apartment — both wallets updated, WT created | Wallet | Auto-UI+API |
+| 3 | [WAL-016](../features/16-wallet.md#-wal-016--approve-credit-note--cn-amount-added-to-wallet-balance) | ★ Approve credit note — CN amount added to wallet balance | Wallet | Auto-UI+API |
+| 4 | [WAL-020](../features/16-wallet.md#-wal-020--pay-invoice-in-full-with-wallet-payment-method--wallet-soa-and-unpaid-total-updated) | ★ Pay invoice in full with wallet payment method — wallet, SOA and unpaid total updated | Wallet | Auto-UI+API |
+| 5 | [WAL-028](../features/16-wallet.md#-wal-028--approve-wallet-refund--wallet-and-refund-from-account-reduced-pv-issued) | ★ Approve wallet refund — wallet and refund-from account reduced, PV issued | Wallet | Auto-UI+API |
+| 6 | [DEP-001](../features/17-deposit.md#-dep-001--add-deposit-mmk-cash--deposit-balance-increases-and-rv-issued) | ★ Add deposit (MMK, cash) — deposit balance increases and RV issued | Deposit | Auto-UI+API |
+| 7 | [DEP-012](../features/17-deposit.md#-dep-012--approve-deposit-invoice--di-approved-and-printable) | ★ Approve deposit invoice — DI approved and printable | Deposit | Auto-UI+API |
+| 8 | [DEP-022](../features/17-deposit.md#-dep-022--approve-withdraw-deposit--deposit-balance-reduced-and-pv-in-cash-outflow) | ★ Approve withdraw deposit — deposit balance reduced and PV in Cash Outflow | Deposit | Auto-UI+API |
+
+## 6 · Cash management
+
+| # | ID | Test case | Feature | Automation |
+|---|---|---|---|---|
+| 1 | [CO-001](../features/13-cash-outflow.md#-co-001--create-cash-outflow-pv-mmk-saved-as-draft-and-approver-notified) | ★ Create Cash Outflow PV (MMK) saved as draft and approver notified | Cash Outflow (PV) | Auto-UI+API |
+| 2 | [CO-010](../features/13-cash-outflow.md#-co-010--approve-cash-outflow-pv-in-recent-outflows-and-account-balance-reduced) | ★ Approve Cash Outflow; PV in Recent Outflows and account balance reduced | Cash Outflow (PV) | Auto-UI+API |
+| 3 | [CT-001](../features/14-cash-transfer.md#-ct-001--transfer-between-mmk-accounts-jv-listed-and-both-balances-updated) | ★ Transfer between MMK accounts; JV listed and both balances updated | Cash Transfer (JV) | Auto-UI+API |
+
+## 7 · Balances & reporting
+
+| # | ID | Test case | Feature | Automation |
+|---|---|---|---|---|
+| 1 | [DASH-001](../features/02-dashboard.md#-dash-001--dashboard-shows-ar-total-current-and-overdue-amounts--by-currency) | ★ Dashboard shows AR total, current and overdue amounts — by currency | Dashboard | Auto-UI+API |
+| 2 | [DASH-002](../features/02-dashboard.md#-dash-002--dashboard-shows-total-cash--bank-balance--mmk-and-other-currency) | ★ Dashboard shows total Cash & Bank balance — MMK and other currency | Dashboard | Auto-UI+API |
+| 3 | [DASH-005](../features/02-dashboard.md#dash-005--dashboard-net-cash-collection-payment-net--by-currency--period) | Dashboard net cash (collection, payment, net) — by currency × period | Dashboard | Auto-UI+API |
+| 4 | [AR-001](../features/03-accounts-receivable.md#-ar-001--ar-page-summary-cards-show-current-and-total-overdue-amounts) | ★ AR page summary cards show current and total overdue amounts | Accounts Receivable | Auto-UI+API |
+| 5 | [AR-003](../features/03-accounts-receivable.md#-ar-003--ar-list-shows-invoicesdebit-notes-by-aging-with-paid-status) | ★ AR list shows invoices/debit notes by aging with paid status | Accounts Receivable | Auto-UI+API |
+| 6 | [APT-021](../features/08-apartments.md#-apt-021--apartment-monthly-soa-lists-transactions-and-ob--previous-month-cb--by-currency) | ★ Apartment monthly SOA lists transactions and OB = previous month CB — by currency | Apartments | Auto-UI+API |
+| 7 | [RPT-001](../features/18-reports.md#-rpt-001--account-statement-shows-total-cash-in-hand-and-bank--by-currency) | ★ Account Statement shows total cash in hand and bank — by currency | Reports | Auto-UI+API |
+| 8 | [RPT-006](../features/18-reports.md#-rpt-006--account-statement-history-day-opening-balance-equals-previous-closing-balance) | ★ Account statement history: day opening balance equals previous closing balance | Reports | Auto-UI+API |
+| 9 | [OB-SOA-001](../features/balances/19-soa-ob-cb.md#-ob-soa-001--soa-obcb-continuity-after-current-date-invoice--by-category) | ★ SOA OB/CB continuity after current-date invoice — by category | SOA — Opening / Closing Balance | Auto-UI+API |
+| 10 | [OB-SOA-007](../features/balances/19-soa-ob-cb.md#-ob-soa-007--soa-obcb-continuity-after-make-payment-rv--by-currency--singlemultipleoverflow) | ★ SOA OB/CB continuity after Make Payment RV — by currency × single/multiple/overflow | SOA — Opening / Closing Balance | Auto-UI+API |
+| 11 | [OB-WAL-001](../features/balances/20-wallet-ob-cb.md#-ob-wal-001--wallet-obcb-continuity-after-wallet-recharge-rv-current-date--by-source) | ★ Wallet OB/CB continuity after wallet recharge RV (current date) — by source | Wallet — Opening / Closing Balance | Auto-UI+API |
+| 12 | [OB-DEP-001](../features/balances/21-deposit-ob-cb.md#-ob-dep-001--deposit-obcb-continuity-after-current-date-add-deposit-rv--by-source) | ★ Deposit OB/CB continuity after current-date add deposit (RV) — by source | Deposit — Opening / Closing Balance | Auto-UI+API |
+| 13 | [OB-ACS-001](../features/balances/22-account-statement-ob-cb.md#-ob-acs-001--account-statement-obcb-continuity-after-cash-received-rv-current-date--by-rv-type) | ★ Account statement OB/CB continuity after cash received RV (current date) — by RV type | Account Statement — Opening / Closing Balance | Auto-UI+API |
+| 14 | [OB-ACS-003](../features/balances/22-account-statement-ob-cb.md#-ob-acs-003--account-statement-obcb-continuity-after-cash-outflow-pv-current-date--by-pv-type) | ★ Account statement OB/CB continuity after cash outflow PV (current date) — by PV type | Account Statement — Opening / Closing Balance | Auto-UI+API |
+| 15 | [API-013](../features/26-api.md#-api-013--get-apartment-soa-by-apartment-and-month) | ★ Get Apartment SOA by apartment and month | External API | Auto-API |
+| 16 | [API-020](../features/26-api.md#-api-020--get-ar-summary-by-apartment) | ★ Get AR summary by apartment | External API | Auto-API |
+
+## 8 · Access control
+
+| # | ID | Test case | Feature | Automation |
+|---|---|---|---|---|
+| 1 | [RBAC-005](../features/24-role-permission.md#-rbac-005--invoicedn-create-permission-limited-to-assigned-income-categories) | ★ Invoice/DN create permission limited to assigned income categories | Role & Permission | Auto-UI+API |
+| 2 | [RBAC-006](../features/24-role-permission.md#-rbac-006--invoicedn-approve-permission-allows-approveremove-of-draft) | ★ Invoice/DN approve permission allows approve/remove of draft | Role & Permission | Auto-UI+API |
+| 3 | [RBAC-010](../features/24-role-permission.md#-rbac-010--uo-approve-permission-allows-single-and-bulk-approve-of-drafts) | ★ UO approve permission allows single and bulk approve of drafts | Role & Permission | Auto-UI+API |
+| 4 | [RBAC-020](../features/24-role-permission.md#-rbac-020--em-approve-permission-allows-single-and-bulk-approve-of-drafts) | ★ EM approve permission allows single and bulk approve of drafts | Role & Permission | Auto-UI+API |
+| 5 | [RBAC-061](../features/24-role-permission.md#-rbac-061--cash-outflow-approve-permission-allows-approveremove-of-draft) | ★ Cash Outflow approve permission allows approve/remove of draft | Role & Permission | Auto-UI+API |

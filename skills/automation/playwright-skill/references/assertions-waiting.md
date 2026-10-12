@@ -1,0 +1,29 @@
+# Assertions and Waiting
+
+Use Playwright web-first assertions:
+
+```ts
+await expect(locator).toBeVisible();
+await expect(locator).toHaveText('Approved');
+await expect(page).toHaveURL(/dashboard/);
+```
+
+Avoid:
+
+```ts
+expect(await locator.isVisible()).toBeTruthy();
+await page.waitForTimeout(3000);
+```
+
+For network-dependent behavior:
+
+```ts
+const responsePromise = page.waitForResponse(
+  response => response.url().includes('/api/orders') && response.status() === 200
+);
+
+await page.getByRole('button', { name: 'Submit' }).click();
+await responsePromise;
+```
+
+Wait for observable state, not arbitrary time.
