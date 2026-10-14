@@ -116,16 +116,34 @@ Consolidated test-case catalog for the **Estate Management System (EM)** rebuild
 
 ## Suggested automation tagging
 
-Tag each automated test with the catalog values, so suites can be selected without separate lists:
+Tag each automated test from the catalog values, so suites can be selected without separate lists. The case ID goes in the test title (and a `tc` annotation), not in a tag:
 
 ```
-@INV-017 @P1 @critical @smoke @e2e @regression   (Playwright: test.describe / grep tags)
+INV-017 <title>   @P1 @critical @smoke @review
 ```
 
-- Smoke run: `--grep @smoke`
-- R1 nightly: `--grep "@P1|@critical"`
-- R2 release candidate: `--grep "@P1|@P2|@critical"`
-- R3 full: everything.
+| Tag | On |
+|---|---|
+| `@P1` / `@P2` / `@P3` | every case (priority) |
+| `@critical` | ★ cases (always P1) |
+| `@smoke` | smoke cases (base row only for data-driven cases) |
+| `@review` | cases with status Review |
+| `@e2e` | only the 12 composed [E2E flows](suites/e2e-critical-flows.md); single cases marked E2E are listed in the flow, not tagged |
+
+There is no `@regression` tag: every case is in regression.
+
+| When | Run |
+|---|---|
+| Every deploy (smoke) | `--grep @smoke --grep-invert @review` |
+| Every merge / nightly (R1) | `--grep @P1 --grep-invert @review` |
+| Release candidate (R2) | `--grep "@P1\|@P2" --grep-invert @review` |
+| Before production release (R3) | everything, `@review` included |
+| E2E flows | `--grep @e2e` |
+| Review cases (non-blocking report) | `--grep @review` |
+
+Blocking gates leave out `@review`: their expected result is still in question, so a red one is checked against [source-issues.md](source-issues.md) instead of failing the build.
+
+The full rules are in the Playwright skill (`.claude/skills/playwright-skill/references/em-project.md`).
 
 ## Updating
 

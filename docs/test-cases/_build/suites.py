@@ -67,7 +67,7 @@ if left:
 
 F = "suites/smoke.md"
 L = ["# Smoke Suite\n", "[← Test case index](../README.md)\n",
-     f"**{len(smoke)} test cases.** Run on every deployment, before any other suite. The smoke suite answers one question: *can EM still bill, collect and report money?* Every case is P1, Active and automatable, with a happy path. Run them in stage order: later stages reuse data created by earlier ones (apartment, contact, accounts).\n",
+     f"**{len(smoke)} test cases.** Run on every deployment, before any other suite. The smoke suite answers one question: *can EM still bill, collect and report money?* Every case is P1, Active and automatable, with a happy path. Stages are a reading order, not a run order: each automated case creates its own data (apartment, contact, accounts) so the cases run independently and in parallel.\n",
      "**Exit rule:** any failure stops the pipeline. Fix it, or roll back the build, before running E2E or regression.\n",
      "Data-driven cases (with variants) run **only the base row** in smoke. The full variant set runs in regression.\n"]
 for name, items in staged:
