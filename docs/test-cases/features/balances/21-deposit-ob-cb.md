@@ -2,7 +2,8 @@
 
 [← Test case index](../../README.md)
 
-**Source sheet(s):** Deposit - OB & CB · **Source rows:** 37 → **13 test cases** after merging 24 duplicates / data variants.  
+<!-- generated:summary (npm run cases:build) — edit the test cases below, not this block -->
+**Test cases:** 13 (+24 data-variant rows)  
 **Priority:** P1 13 · P2 0 · P3 0 · **★ Critical:** 13 · **Smoke:** 1 · **E2E:** 11 · **Auto:** 13 · **Manual:** 0
 
 ## Summary
@@ -22,6 +23,7 @@
 | [OB-DEP-011](#-ob-dep-011--deposit-obcb-after-one-transaction-type-followed-by-another--type-pair-matrix) | ★ Deposit OB/CB after one transaction type followed by another — type-pair matrix | Deposit OB/CB - Sequential | P1 | E2E · Regression | Auto-UI+API | Active | 6 |
 | [OB-DEP-012](#-ob-dep-012--two-users-withdraw-deposit-concurrently-exceeding-balance--second-refused) | ★ Two users withdraw deposit concurrently exceeding balance — second refused | Deposit withdraw concurrency | P1 | Regression | Auto-API | Active | 2 |
 | [OB-DEP-013](#-ob-dep-013--two-users-withdraw-deposit-concurrently-within-balance--both-allowed-and-approvable) | ★ Two users withdraw deposit concurrently within balance — both allowed and approvable | Deposit withdraw concurrency | P1 | Regression | Auto-API | Active |  |
+<!-- /generated:summary -->
 
 ## Test cases
 

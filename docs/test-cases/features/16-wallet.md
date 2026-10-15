@@ -2,7 +2,8 @@
 
 [← Test case index](../README.md)
 
-**Source sheet(s):** Wallet · **Source rows:** 40 → **32 test cases** after merging 8 duplicates / data variants.  
+<!-- generated:summary (npm run cases:build) — edit the test cases below, not this block -->
+**Test cases:** 32 (+8 data-variant rows)  
 **Priority:** P1 9 · P2 11 · P3 12 · **★ Critical:** 9 · **Smoke:** 5 · **E2E:** 7 · **Auto:** 32 · **Manual:** 0
 
 ## Summary
@@ -41,6 +42,7 @@
 | [WAL-030](#wal-030--filter-wallet-transactions-by-month-and-currency) | Filter wallet transactions by month and currency | Wallet statement | P2 | Regression | Auto-UI | Active |  |
 | [WAL-031](#-wal-031--wallet-ob-of-upcoming-month-equals-current-wallet-balance) | ★ Wallet OB of upcoming month equals current wallet balance | Wallet statement | P1 | Regression | Auto-UI+API | Active |  |
 | [WAL-032](#wal-032--wallet-transaction-pdf-for-selected-month-and-currency) | Wallet transaction PDF for selected month and currency | Wallet statement | P2 | Regression | Auto-UI+API | Active |  |
+<!-- /generated:summary -->
 
 ## Test cases
 

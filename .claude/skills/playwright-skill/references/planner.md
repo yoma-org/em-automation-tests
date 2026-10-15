@@ -2,7 +2,8 @@
 
 ## Inputs
 
-- canonical cases: `docs/test-cases/features/**/*.md` and `docs/test-cases/test-catalog.csv`;
+- canonical cases: `docs/test-cases/features/**/*.md` (the only source) and `docs/test-cases/test-catalog.csv`
+  (generated from them; handy for filtering);
 - E2E flows: `docs/test-cases/suites/e2e-critical-flows.md`;
 - open questions: `docs/test-cases/source-issues.md`;
 - business rules: `docs/EM_Business_Summary.md`, `docs/ems-knowledge/`;
@@ -22,9 +23,10 @@
 
 - A new scenario found by the planner or the `playwright-test-planner` agent is a `GAP-<n>`
   in the plan under `specs/`.
-- It becomes a canonical case only after validation: add it to the feature file and
-  `test-catalog.csv` with a new `<FEATURE>-<nnn>` ID. Do not edit generated sections by hand
-  if `docs/test-cases/_build/` scripts own them; update the build input instead and say so.
+- It becomes a canonical case only after validation: add it to the feature file with the
+  next free `<FEATURE>-<nnn>` ID (template and rules: "Adding or changing test cases" in
+  `docs/test-cases/README.md`), then run `npm run cases:build`. Never edit `test-catalog.csv`,
+  the suites or the generated blocks by hand, and never renumber existing IDs.
 
 ## Planner Output Example
 

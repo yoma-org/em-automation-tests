@@ -2,7 +2,8 @@
 
 [← Test case index](../README.md)
 
-**Source sheet(s):** Cash Outflow · **Source rows:** 17 → **13 test cases** after merging 4 duplicates / data variants.  
+<!-- generated:summary (npm run cases:build) — edit the test cases below, not this block -->
+**Test cases:** 13 (+4 data-variant rows)  
 **Priority:** P1 4 · P2 6 · P3 3 · **★ Critical:** 4 · **Smoke:** 2 · **E2E:** 2 · **Auto:** 11 · **Manual:** 2 · **Review:** 2
 
 ## Summary
@@ -22,6 +23,7 @@
 | [CO-011](#co-011--print-payment-voucher-pv) | Print payment voucher (PV) | Voucher print | P2 | Regression | Manual | Active |  |
 | [CO-012](#co-012--cash-outflow-is-not-submitted-by-pressing-enter-key) | Cash Outflow is not submitted by pressing Enter key | Cash outflow - form validation | P3 | Regression | Auto-UI | Active |  |
 | [CO-013](#co-013--pv-numbering-continues-without-upper-limit) | PV numbering continues without upper limit | Voucher numbering | P3 | Regression | Manual | Review |  |
+<!-- /generated:summary -->
 
 ## Test cases
 

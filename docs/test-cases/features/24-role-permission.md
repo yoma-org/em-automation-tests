@@ -2,7 +2,8 @@
 
 [← Test case index](../README.md)
 
-**Source sheet(s):** Role&Permission · **Source rows:** 81 → **76 test cases** after merging 5 duplicates / data variants.  
+<!-- generated:summary (npm run cases:build) — edit the test cases below, not this block -->
+**Test cases:** 76 (+5 data-variant rows)  
 **Priority:** P1 29 · P2 47 · P3 0 · **★ Critical:** 29 · **Smoke:** 5 · **E2E:** 32 · **Auto:** 76 · **Manual:** 0 · **Review:** 11
 
 ## Summary
@@ -85,6 +86,7 @@
 | [RBAC-074](#rbac-074--report-view-assigned-unknown-received-logs) | Report view: Assigned Unknown Received logs | Reports | P2 | E2E · Regression | Auto-UI | Review |  |
 | [RBAC-075](#rbac-075--report-view-cash--bank-balance-and-account-statement-with-export) | Report view: Cash & Bank balance and Account Statement with export | Reports | P2 | E2E · Regression | Auto-UI | Review |  |
 | [RBAC-076](#rbac-076--report-view-invoices-report-with-filter-export-detail) | Report view: Invoices report with filter, export, detail | Reports | P2 | E2E · Regression | Auto-UI | Review |  |
+<!-- /generated:summary -->
 
 ## Test cases
 

@@ -2,7 +2,8 @@
 
 [← Test case index](../README.md)
 
-**Source sheet(s):** Deposit · **Source rows:** 29 → **25 test cases** after merging 4 duplicates / data variants.  
+<!-- generated:summary (npm run cases:build) — edit the test cases below, not this block -->
+**Test cases:** 25 (+4 data-variant rows)  
 **Priority:** P1 6 · P2 10 · P3 9 · **★ Critical:** 6 · **Smoke:** 3 · **E2E:** 3 · **Auto:** 25 · **Manual:** 0 · **Review:** 1
 
 ## Summary
@@ -34,6 +35,7 @@
 | [DEP-023](#dep-023--filter-deposit-transactions-by-month-and-currency) | Filter deposit transactions by month and currency | Deposit statement | P2 | Regression | Auto-UI | Active |  |
 | [DEP-024](#-dep-024--deposit-ob-of-upcoming-month-equals-current-deposit-balance) | ★ Deposit OB of upcoming month equals current deposit balance | Deposit statement | P1 | Regression | Auto-UI+API | Active |  |
 | [DEP-025](#dep-025--deposit-transaction-pdf-for-selected-month-and-currency) | Deposit transaction PDF for selected month and currency | Deposit statement | P2 | Regression | Auto-UI+API | Active |  |
+<!-- /generated:summary -->
 
 ## Test cases
 

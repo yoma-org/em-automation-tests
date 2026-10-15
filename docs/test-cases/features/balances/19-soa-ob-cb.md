@@ -2,7 +2,8 @@
 
 [← Test case index](../../README.md)
 
-**Source sheet(s):** SOA - OB & CB · **Source rows:** 293 → **20 test cases** after merging 273 duplicates / data variants.  
+<!-- generated:summary (npm run cases:build) — edit the test cases below, not this block -->
+**Test cases:** 20 (+273 data-variant rows)  
 **Priority:** P1 20 · P2 0 · P3 0 · **★ Critical:** 20 · **Smoke:** 2 · **E2E:** 17 · **Auto:** 20 · **Manual:** 0 · **Review:** 3
 
 ## Summary
@@ -29,6 +30,7 @@
 | [OB-SOA-018](#-ob-soa-018--two-users-submit-uo-draft-for-same-apartment-at-same-time--second-blocked) | ★ Two users submit UO draft for same apartment at same time — second blocked | Concurrent draft submission | P1 | Regression | Auto-API | Review | 2 |
 | [OB-SOA-019](#-ob-soa-019--two-users-submit-meter-reset-draft-for-same-apartment-at-same-time--second-blocked) | ★ Two users submit Meter Reset draft for same apartment at same time — second blocked | Concurrent draft submission | P1 | Regression | Auto-API | Review | 2 |
 | [OB-SOA-020](#-ob-soa-020--two-users-submit-em-draft-for-same-apartment-at-same-time--second-blocked) | ★ Two users submit EM draft for same apartment at same time — second blocked | Concurrent draft submission | P1 | Regression | Auto-API | Review | 2 |
+<!-- /generated:summary -->
 
 ## Test cases
 

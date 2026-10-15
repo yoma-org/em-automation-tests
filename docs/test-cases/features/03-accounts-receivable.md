@@ -2,7 +2,8 @@
 
 [← Test case index](../README.md)
 
-**Source sheet(s):** Accounts Receivable · **Source rows:** 34 → **18 test cases** after merging 16 duplicates / data variants.  
+<!-- generated:summary (npm run cases:build) — edit the test cases below, not this block -->
+**Test cases:** 18 (+15 data-variant rows)  
 **Priority:** P1 4 · P2 12 · P3 2 · **★ Critical:** 2 · **Smoke:** 2 · **E2E:** 2 · **Auto:** 18 · **Manual:** 0 · **Review:** 1
 
 ## Summary
@@ -27,6 +28,7 @@
 | [AR-016](#ar-016--bulk-soa-pdf-lists-apartment-soas-for-selected-zonebuildingcurrencydate) | Bulk SOA PDF lists apartment SOAs for selected zone/building/currency/date | Bulk SOA | P2 | Regression | Auto-UI+API | Active |  |
 | [AR-017](#ar-017--sort-ar-list-by-each-column-ascdesc) | Sort AR list by each column asc/desc | Sorting | P3 | Regression | Auto-UI | Active |  |
 | [AR-018](#ar-018--ar-list-sorts-by-only-one-column-at-a-time) | AR list sorts by only one column at a time | Sorting | P3 | Regression | Auto-UI | Active |  |
+<!-- /generated:summary -->
 
 ## Test cases
 

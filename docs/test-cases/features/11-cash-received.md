@@ -2,7 +2,8 @@
 
 [← Test case index](../README.md)
 
-**Source sheet(s):** Cash Received · **Source rows:** 29 → **13 test cases** after merging 16 duplicates / data variants.  
+<!-- generated:summary (npm run cases:build) — edit the test cases below, not this block -->
+**Test cases:** 13 (+6 data-variant rows)  
 **Priority:** P1 3 · P2 7 · P3 3 · **★ Critical:** 3 · **Smoke:** 2 · **E2E:** 3 · **Auto:** 11 · **Manual:** 2 · **Review:** 2
 
 ## Summary
@@ -22,6 +23,7 @@
 | [CR-011](#cr-011--print-receipt-voucher-rv) | Print receipt voucher (RV) | Voucher print | P2 | Regression | Manual | Active |  |
 | [CR-012](#cr-012--rv-numbering-continues-without-upper-limit) | RV numbering continues without upper limit | Voucher numbering | P3 | Regression | Manual | Review |  |
 | [CR-013](#cr-013--update-payment-methodstatus-of-a-cheque-receipt-in-recent-receipts) | Update payment method/status of a Cheque receipt in Recent Receipts | Recent receipts | P2 | Regression | Auto-UI | Review |  |
+<!-- /generated:summary -->
 
 ## Test cases
 

@@ -2,7 +2,8 @@
 
 [← Test case index](../README.md)
 
-**Source sheet(s):** Cash Transfer · **Source rows:** 16 → **12 test cases** after merging 4 duplicates / data variants.  
+<!-- generated:summary (npm run cases:build) — edit the test cases below, not this block -->
+**Test cases:** 12 (+4 data-variant rows)  
 **Priority:** P1 4 · P2 5 · P3 3 · **★ Critical:** 4 · **Smoke:** 1 · **E2E:** 4 · **Auto:** 10 · **Manual:** 2 · **Review:** 1
 
 ## Summary
@@ -21,6 +22,7 @@
 | [CT-010](#ct-010--print-journal-voucher-jv) | Print journal voucher (JV) | Voucher print | P2 | Regression | Manual | Active |  |
 | [CT-011](#ct-011--cash-transfer-is-not-submitted-by-pressing-enter-key) | Cash Transfer is not submitted by pressing Enter key | Cash transfer - form validation | P3 | Regression | Auto-UI | Active |  |
 | [CT-012](#ct-012--jv-numbering-continues-without-upper-limit) | JV numbering continues without upper limit | Voucher numbering | P3 | Regression | Manual | Review |  |
+<!-- /generated:summary -->
 
 ## Test cases
 

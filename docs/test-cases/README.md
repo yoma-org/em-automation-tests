@@ -4,8 +4,8 @@ Consolidated test-case catalog for the **Estate Management System (EM)** rebuild
 
 | | |
 |---|---|
-| **Source** | `ZL_TED EM Test Case for Round Testing (2026)_19082026.xlsx` (SharePoint, last modified 9 Oct 2026). 27 test sheets, prepared by the EM QA team |
-| **Consolidated** | 11 Oct 2026 |
+| **Source of truth** | The feature files in [features/](features/). Add and change test cases there (see [Adding or changing test cases](#adding-or-changing-test-cases)). |
+| **Origin** | First imported on 11 Oct 2026 from `ZL_TED EM Test Case for Round Testing (2026)_19082026.xlsx` (27 sheets, EM QA team). The workbook is no longer maintained. |
 | **Business context** | [EM Business Summary](../EM_Business_Summary.md) |
 
 ## How to read this
@@ -43,17 +43,16 @@ Consolidated test-case catalog for the **Estate Management System (EM)** rebuild
 
 **Status:** `Active` · `Review` (expected result or behaviour needs confirmation — see [source-issues.md](source-issues.md)) · `Obsolete`.
 
-**Merged cases.** Duplicates and "same check, different data" rows were combined into one canonical case. The merged rows are listed in that case's **Data variants** table. Automate each such case as **one parameterized / data-driven test** with one row per variant. The full merge list is in [duplicates-merged.md](duplicates-merged.md).
+**Data variants.** A case that runs the same check with different data lists the data in its **Data variants** table. Automate each such case as **one parameterized / data-driven test** with one run per variant. The variants of the imported cases are workbook rows that were merged; the merge record is in [duplicates-merged.md](duplicates-merged.md).
 
-**IDs.** `<FEATURE>-<nnn>`, for example `INV-017` or `OB-SOA-007`. Every case keeps its source sheet, row and original ID (e.g. `TC_Inv_021`) for traceability.
+**IDs.** `<FEATURE>-<nnn>`, for example `INV-017` or `OB-SOA-007`. An ID never changes and is never reused. Imported cases keep their workbook sheet, row and original ID (e.g. `TC_Inv_021`) in the **Source** column.
 
-
+<!-- generated:overview (npm run cases:build) -->
 ## At a glance
 
 | | |
 |---|---|
-| Source rows read | 1539 |
-| Test cases after merging | **599** (940 rows merged as duplicates / data variants) |
+| Test cases | **599** (+940 data-variant rows = 1539 rows) |
 | ★ Critical business flow | 208 |
 | Priority P1 / P2 / P3 | 225 / 303 / 71 |
 | Smoke / E2E-tagged | 56 / 198 (+ 12 composed [E2E flows](suites/e2e-critical-flows.md)) |
@@ -70,49 +69,49 @@ Consolidated test-case catalog for the **Estate Management System (EM)** rebuild
 
 ## Features
 
-| # | Feature | Cases | ★ | P1 | Smoke | Auto | Manual | Source sheet(s) |
-|---|---|---|---|---|---|---|---|---|
-| | **Billing** | | | | | | | |
-| 04 | [Invoice & Debit Note](features/04-invoice-debit-note.md) | 37 | 7 | 7 | 4 | 35 | 2 | Invoice-Debit Note |
-| 05 | [Utility Operations (UO) — manual entry](features/05-utility-operations-uo.md) | 28 | 8 | 8 | 2 | 28 | 0 | UO |
-| 06 | [UO Import (bulk meter readings)](features/06-uo-import.md) | 38 | 11 | 11 | 1 | 37 | 1 | Uo import |
-| 07 | [Estate Management Fee (EM)](features/07-estate-management-fee.md) | 17 | 6 | 6 | 3 | 17 | 0 | EM |
-| | **Collection & cash** | | | | | | | |
-| 10 | [Make Payment](features/10-make-payment.md) | 14 | 13 | 13 | 4 | 14 | 0 | Make Payment |
-| 11 | [Cash Received (RV / Unknown / Funding)](features/11-cash-received.md) | 13 | 3 | 3 | 2 | 11 | 2 | Cash Received |
-| 12 | [Payment Concurrency (1 Inv × 2 RV, 1 RV × 2 Inv)](features/12-payment-concurrency.md) | 7 | 7 | 7 | 0 | 7 | 0 | 1Inv 2RV, 1RV 2Inv |
-| 13 | [Cash Outflow (PV)](features/13-cash-outflow.md) | 13 | 4 | 4 | 2 | 11 | 2 | Cash Outflow |
-| 14 | [Cash Transfer (JV)](features/14-cash-transfer.md) | 12 | 4 | 4 | 1 | 10 | 2 | Cash Transfer |
-| 15 | [Cash & Bank Account](features/15-cash-bank-account.md) | 20 | 2 | 4 | 1 | 20 | 0 | Cash and Bank Account |
-| | **Apartment ledgers** | | | | | | | |
-| 08 | [Apartments](features/08-apartments.md) | 33 | 9 | 15 | 3 | 33 | 0 | Apartments |
-| 09 | [Contacts](features/09-contacts.md) | 32 | 8 | 13 | 1 | 32 | 0 | Contacts |
-| 16 | [Wallet](features/16-wallet.md) | 32 | 9 | 9 | 5 | 32 | 0 | Wallet |
-| 17 | [Deposit](features/17-deposit.md) | 25 | 6 | 6 | 3 | 25 | 0 | Deposit |
-| | **Balances (OB / CB)** | | | | | | | |
-| 19 | [SOA — Opening / Closing Balance](features/balances/19-soa-ob-cb.md) | 20 | 20 | 20 | 2 | 20 | 0 | SOA - OB & CB |
-| 20 | [Wallet — Opening / Closing Balance](features/balances/20-wallet-ob-cb.md) | 13 | 13 | 13 | 1 | 13 | 0 | Wallet - OB & CB |
-| 21 | [Deposit — Opening / Closing Balance](features/balances/21-deposit-ob-cb.md) | 13 | 13 | 13 | 1 | 13 | 0 | Deposit - OB & CB |
-| 22 | [Account Statement — Opening / Closing Balance](features/balances/22-account-statement-ob-cb.md) | 11 | 11 | 11 | 2 | 11 | 0 | Acc Statement - OB & CB |
-| | **Receivables & reporting** | | | | | | | |
-| 02 | [Dashboard](features/02-dashboard.md) | 8 | 4 | 6 | 3 | 8 | 0 | Dashboard |
-| 03 | [Accounts Receivable](features/03-accounts-receivable.md) | 18 | 2 | 4 | 2 | 18 | 0 | Accounts Receivable |
-| 18 | [Reports](features/18-reports.md) | 35 | 4 | 4 | 2 | 35 | 0 | Reports |
-| 25 | [Global Search](features/25-global-search.md) | 1 | 0 | 0 | 0 | 1 | 0 | Global Search |
-| | **Platform** | | | | | | | |
-| 01 | [Login & Authentication](features/01-login.md) | 6 | 1 | 1 | 1 | 6 | 0 | Login |
-| 23 | [Settings (master data & configuration)](features/23-settings.md) | 50 | 3 | 3 | 1 | 50 | 0 | Setting |
-| 24 | [Role & Permission](features/24-role-permission.md) | 76 | 29 | 29 | 5 | 76 | 0 | Role&Permission |
-| 26 | [External API](features/26-api.md) | 27 | 11 | 11 | 4 | 27 | 0 | API |
+| # | Feature | Cases | ★ | P1 | Smoke | Auto | Manual |
+|---|---|---|---|---|---|---|---|
+| | **Billing** | | | | | | |
+| 04 | [Invoice & Debit Note](features/04-invoice-debit-note.md) | 37 | 7 | 7 | 4 | 35 | 2 |
+| 05 | [Utility Operations (UO) — manual entry](features/05-utility-operations-uo.md) | 28 | 8 | 8 | 2 | 28 | 0 |
+| 06 | [UO Import (bulk meter readings)](features/06-uo-import.md) | 38 | 11 | 11 | 1 | 37 | 1 |
+| 07 | [Estate Management Fee (EM)](features/07-estate-management-fee.md) | 17 | 6 | 6 | 3 | 17 | 0 |
+| | **Collection & cash** | | | | | | |
+| 10 | [Make Payment](features/10-make-payment.md) | 14 | 13 | 13 | 4 | 14 | 0 |
+| 11 | [Cash Received (RV / Unknown / Funding)](features/11-cash-received.md) | 13 | 3 | 3 | 2 | 11 | 2 |
+| 12 | [Payment Concurrency (1 Inv × 2 RV, 1 RV × 2 Inv)](features/12-payment-concurrency.md) | 7 | 7 | 7 | 0 | 7 | 0 |
+| 13 | [Cash Outflow (PV)](features/13-cash-outflow.md) | 13 | 4 | 4 | 2 | 11 | 2 |
+| 14 | [Cash Transfer (JV)](features/14-cash-transfer.md) | 12 | 4 | 4 | 1 | 10 | 2 |
+| 15 | [Cash & Bank Account](features/15-cash-bank-account.md) | 20 | 2 | 4 | 1 | 20 | 0 |
+| | **Apartment ledgers** | | | | | | |
+| 08 | [Apartments](features/08-apartments.md) | 33 | 9 | 15 | 3 | 33 | 0 |
+| 09 | [Contacts](features/09-contacts.md) | 32 | 8 | 13 | 1 | 32 | 0 |
+| 16 | [Wallet](features/16-wallet.md) | 32 | 9 | 9 | 5 | 32 | 0 |
+| 17 | [Deposit](features/17-deposit.md) | 25 | 6 | 6 | 3 | 25 | 0 |
+| | **Balances (OB / CB)** | | | | | | |
+| 19 | [SOA — Opening / Closing Balance](features/balances/19-soa-ob-cb.md) | 20 | 20 | 20 | 2 | 20 | 0 |
+| 20 | [Wallet — Opening / Closing Balance](features/balances/20-wallet-ob-cb.md) | 13 | 13 | 13 | 1 | 13 | 0 |
+| 21 | [Deposit — Opening / Closing Balance](features/balances/21-deposit-ob-cb.md) | 13 | 13 | 13 | 1 | 13 | 0 |
+| 22 | [Account Statement — Opening / Closing Balance](features/balances/22-account-statement-ob-cb.md) | 11 | 11 | 11 | 2 | 11 | 0 |
+| | **Receivables & reporting** | | | | | | |
+| 02 | [Dashboard](features/02-dashboard.md) | 8 | 4 | 6 | 3 | 8 | 0 |
+| 03 | [Accounts Receivable](features/03-accounts-receivable.md) | 18 | 2 | 4 | 2 | 18 | 0 |
+| 18 | [Reports](features/18-reports.md) | 35 | 4 | 4 | 2 | 35 | 0 |
+| 25 | [Global Search](features/25-global-search.md) | 1 | 0 | 0 | 0 | 1 | 0 |
+| | **Platform** | | | | | | |
+| 01 | [Login & Authentication](features/01-login.md) | 6 | 1 | 1 | 1 | 6 | 0 |
+| 23 | [Settings (master data & configuration)](features/23-settings.md) | 50 | 3 | 3 | 1 | 50 | 0 |
+| 24 | [Role & Permission](features/24-role-permission.md) | 76 | 29 | 29 | 5 | 76 | 0 |
+| 26 | [External API](features/26-api.md) | 27 | 11 | 11 | 4 | 27 | 0 |
+<!-- /generated:overview -->
 
 ## Other files
 
 | File | What it is |
 |---|---|
-| [test-catalog.csv](test-catalog.csv) | One row per **source row**, with columns:<br>• new ID, canonical / variant<br>• feature and priority<br>• ★, smoke, E2E, regression<br>• automation, status, variant label<br>• source sheet / row / ID<br>Use it to import into a test-management tool or to drive automation tags. |
-| [duplicates-merged.md](duplicates-merged.md) | Every merge: canonical case ← merged rows, and why. |
-| [source-issues.md](source-issues.md) | Decisions needed, known defects, wrong expected results, coverage gaps, all cases in Review. |
-| [_build/](_build/) | The scripts and annotation data that generated these docs (see below). |
+| [test-catalog.csv](test-catalog.csv) | Generated. One row per case (`canonical`) and one per extra data variant (`variant`), with columns:<br>• ID, row type, feature, sub-feature, title<br>• priority, ★, smoke, E2E, regression<br>• automation, status, variant label<br>• source, source TC ID, feature file<br>The Playwright traceability check and tags are driven by it. |
+| [duplicates-merged.md](duplicates-merged.md) | Historical record of the workbook import (11 Oct 2026): which workbook rows were merged into which case, and why. Not updated. |
+| [source-issues.md](source-issues.md) | Decisions needed, known defects, wrong expected results, coverage gaps (hand-written); all cases in Review (generated). |
 
 ## Suggested automation tagging
 
@@ -145,20 +144,69 @@ Blocking gates leave out `@review`: their expected result is still in question, 
 
 The full rules are in the Playwright skill (`.claude/skills/playwright-skill/references/em-project.md`).
 
-## Updating
+## Adding or changing test cases
 
-The feature files, suites and catalog are **generated**; do not hand-edit them, or the next regeneration will lose the changes. Two exceptions:
+The case sections in `features/**/*.md` are the **only** place a test case is written. Everything else is generated from them by `npm run cases:build`:
 
-- [suites/e2e-critical-flows.md](suites/e2e-critical-flows.md) is hand-written.
-- `_build/*.md` are hand-written fragments (README, issues).
+- the counts and **Summary** table at the top of each feature file,
+- [test-catalog.csv](test-catalog.csv), [suites/smoke.md](suites/smoke.md), [suites/regression.md](suites/regression.md),
+- the blocks between `<!-- generated:… -->` markers in this README and in [source-issues.md](source-issues.md).
 
-To change a classification, edit `_build/annotations/*.json` and regenerate:
+Do not edit generated content by hand; the next build overwrites it. [suites/e2e-critical-flows.md](suites/e2e-critical-flows.md) is hand-written.
 
-```bash
-# from docs/test-cases/_build, with openpyxl installed
-python3 normalize.py "<path to workbook>.xlsx" cases.json
-python3 render.py cases.json annotations ..
-python3 suites.py ..
+**Workflow**
+
+1. Edit or add the case in its feature file.
+2. Run `npm run cases:build`. It validates every case and rewrites the generated files.
+3. Commit the feature file together with the generated files. `npm run cases:check` fails when they are out of date (use it in CI).
+
+**Rules**
+
+- **New case:** the next free number at the end of the feature, under the right `### <sub-feature>` heading. Never renumber or reuse an ID.
+- **Removed case:** set its Status to `Obsolete` and keep it. Delete a case only if it was never automated.
+- **New feature:** a new file `features/<nn>-<slug>.md` (next free number) with its own ID prefix, starting with `# <nn> · <Feature name>`, the index link, empty `<!-- generated:summary -->` markers and `## Test cases`. Add the prefix to a README group and a smoke stage in `scripts/test-cases.mjs`, or it is listed under "Other".
+- **Status `Review`** needs the open question after the status: `Review — <question>`. **Automation `Manual`** needs the reason: `Manual — <reason>`.
+
+**Case template**
+
+```markdown
+### <Sub-feature>
+
+#### ★ PAY-015 · <Title: action and expected outcome>
+
+| Priority | Suites | Automation | Status | Source |
+|---|---|---|---|---|
+| P1 | Smoke · E2E · Regression | Auto-UI+API | Active | <ticket / spec / author, date> |
+
+**Preconditions:**
+
+1. ...
+
+**Test data:**
+
+1. ...
+
+**Steps:**
+
+1. ...
+
+**Expected result:**
+
+1. ...
+
+**Data variants (3 incl. base) — run as one data-driven test:**
+
+| # | Variant | Source | Note |
+|---|---|---|---|
+| 1 | (base) <title> | <source> | |
+| 2 | <short label, unique in this case> | <source> | |
+| 3 | <short label> | <source> | Review; <open question> |
+
+---
 ```
 
-When the source workbook gains or loses rows, row numbers shift. Re-check `annotations/*.json` keys (`"<Sheet>#<row>"`) before regenerating.
+- `★ ` before the ID marks a critical business flow (P1 only). Leave it out otherwise.
+- **Suites:** any of `Smoke`, `E2E`, plus `Regression` for every case that is not Obsolete. Smoke cases must be P1, Active and automatable.
+- **Priority** `P1` / `P2` / `P3`; **Automation** `Auto-UI` / `Auto-UI+API` / `Auto-API` / `Manual`; **Status** `Active` / `Review` / `Obsolete`.
+- Leave out the Data variants section when the case has a single data set. The variant label becomes part of the Playwright test title, so keep it short and unique.
+- Other sections (`Check areas`, `Scenario group`, …) are free-form; use what the case needs.

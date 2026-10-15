@@ -2,7 +2,8 @@
 
 [← Test case index](../README.md)
 
-**Source sheet(s):** Invoice-Debit Note · **Source rows:** 45 → **37 test cases** after merging 8 duplicates / data variants.  
+<!-- generated:summary (npm run cases:build) — edit the test cases below, not this block -->
+**Test cases:** 37 (+8 data-variant rows)  
 **Priority:** P1 7 · P2 20 · P3 10 · **★ Critical:** 7 · **Smoke:** 4 · **E2E:** 7 · **Auto:** 35 · **Manual:** 2 · **Review:** 6
 
 ## Summary
@@ -46,6 +47,7 @@
 | [INV-035](#inv-035--filter-invoicedebit-note-list-by-date-range-building-apartment-currency-reset) | Filter Invoice/Debit Note list by date range, building, apartment, currency; reset | Inv/DN listing | P2 | Regression | Auto-UI | Active |  |
 | [INV-036](#inv-036--invoicedebit-note-list-shows-expected-columns-and-amounts) | Invoice/Debit Note list shows expected columns and amounts | Inv/DN listing | P2 | Regression | Auto-UI | Active |  |
 | [INV-037](#inv-037--view-invoicedebit-note-detail-and-viewdownload-pdf) | View Invoice/Debit Note detail and view/download PDF | Inv/DN listing | P2 | Regression | Auto-UI+API | Active |  |
+<!-- /generated:summary -->
 
 ## Test cases
 

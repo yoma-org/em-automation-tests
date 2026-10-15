@@ -30,7 +30,8 @@ the generic examples in the other references.
 
 ## Canonical Test Cases
 
-- Source of truth: `docs/test-cases/features/**/*.md`, indexed by `docs/test-cases/test-catalog.csv`.
+- Source of truth: the case sections in `docs/test-cases/features/**/*.md`. `docs/test-cases/test-catalog.csv`,
+  the suites and the summary tables are generated from them by `npm run cases:build`.
 - Cross-module flows: `docs/test-cases/suites/e2e-critical-flows.md` (`E2E-01` … `E2E-12`).
 - IDs are `<FEATURE>-<nnn>` (e.g. `AUTH-001`, `INV-017`, `OB-SOA-007`). Keep the source ID
   (e.g. `TC_Login_001`) for traceability.
@@ -65,7 +66,8 @@ Do not claim setup or validation succeeded unless the commands were executed suc
 3. Preserve valid existing conventions unless restructuring is explicitly requested.
 4. Implement only `Active` and `Review` canonical cases, as the Status mapping says; never `Obsolete` or `Manual`.
 5. `docs/test-cases/` remains the single source of truth; the Planner never owns a separate case set.
-6. Validated gaps are written back to `docs/test-cases/` (feature file + catalog), not kept only in `specs/`.
+6. Validated gaps are written back to the feature file in `docs/test-cases/` and the catalog rebuilt
+   (`npm run cases:build`), not kept only in `specs/`.
 7. Use fixtures for dependency injection and lifecycle management.
 8. Keep locators and reusable page interactions in Page or Component Objects.
 9. Keep scenario-specific business assertions visible in specs.

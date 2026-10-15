@@ -15,7 +15,7 @@ Before starting, read `.claude/skills/playwright-skill/SKILL.md`,
 `.claude/skills/playwright-skill/references/planner.md`. Where they conflict with this
 prompt, they win.
 
-- The test cases already exist: `docs/test-cases/` (indexed by `test-catalog.csv`) is the
+- The test cases already exist: `docs/test-cases/features/` (`test-catalog.csv` is generated from it) is the
   single source of truth. Plan **from** the cases in scope; do not design a new case set.
 - Every scenario in your plan starts with its canonical ID (e.g. `INV-017`). A scenario you
   find that has no canonical case is labelled `GAP-<n>` and listed separately for review.

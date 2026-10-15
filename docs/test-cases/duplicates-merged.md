@@ -2,6 +2,8 @@
 
 [← Test case index](README.md)
 
+> **Historical record.** This file documents the one-time import from the QA workbook (11 Oct 2026) and is no longer updated. The current variants of each case are in its feature file.
+
 Each section lists, per canonical test case, every source test case that was merged into it, the merge type and the reason. A merged row is either a true duplicate or the same check with different data, which automation should run as **one data-driven (parameterized) test** with one row per variant.
 
 **940 source rows merged into 170 canonical cases** (of 599 canonical cases in total).
@@ -35,7 +37,7 @@ Every merged row was re-read against its canonical case (title, preconditions, d
 
 ## Possible missed duplicates (not merged yet)
 
-These canonical cases look like the same test as each other. They were **not** merged, because merging renumbers IDs. Decide case by case, then set `merge_into` in `annotations/*.json` and regenerate.
+These canonical cases look like the same test as each other. They were **not** merged. To merge one: add its data as a row in the other case's Data variants table, set the duplicate's Status to `Obsolete` with the reason ("Obsolete — merged into UOI-003"), keep its ID, and run `npm run cases:build`.
 
 | Cases | Why they look like duplicates |
 |---|---|

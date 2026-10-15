@@ -2,7 +2,8 @@
 
 [← Test case index](../README.md)
 
-**Source sheet(s):** Uo import · **Source rows:** 64 → **38 test cases** after merging 26 duplicates / data variants.  
+<!-- generated:summary (npm run cases:build) — edit the test cases below, not this block -->
+**Test cases:** 38 (+26 data-variant rows)  
 **Priority:** P1 11 · P2 26 · P3 1 · **★ Critical:** 11 · **Smoke:** 1 · **E2E:** 6 · **Auto:** 37 · **Manual:** 1 · **Review:** 4
 
 ## Summary
@@ -47,6 +48,7 @@
 | [UOI-036](#uoi-036--user-with-only-uo-create-permission-gets-permission-denied-on-import-history) | User with only UO create permission gets Permission Denied on import history | History permission | P2 | Regression | Auto-UI | Review |  |
 | [UOI-037](#-uoi-037--approving-current-month-invdn-during-uo-import-keeps-invoiceco-ref-numbering-in-order) | ★ Approving current-month Inv/DN during UO import keeps invoice/co-ref numbering in order | Approval during import | P1 | E2E · Regression | Auto-API | Active |  |
 | [UOI-038](#-uoi-038--approving-previous-month-invdn-during-uo-import-keeps-numbering-consistent) | ★ Approving previous-month Inv/DN during UO import keeps numbering consistent | Approval during import | P1 | E2E · Regression | Auto-API | Active |  |
+<!-- /generated:summary -->
 
 ## Test cases
 

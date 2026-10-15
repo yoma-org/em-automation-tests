@@ -2,7 +2,8 @@
 
 [← Test case index](../README.md)
 
-**Source sheet(s):** Global Search · **Source rows:** 9 → **1 test cases** after merging 8 duplicates / data variants.  
+<!-- generated:summary (npm run cases:build) — edit the test cases below, not this block -->
+**Test cases:** 1 (+8 data-variant rows)  
 **Priority:** P1 0 · P2 1 · P3 0 · **★ Critical:** 0 · **Smoke:** 0 · **E2E:** 0 · **Auto:** 1 · **Manual:** 0
 
 ## Summary
@@ -10,6 +11,7 @@
 | ID | Test case | Sub-feature | Pri | Suites | Automation | Status | Variants |
 |---|---|---|---|---|---|---|---|
 | [SRCH-001](#srch-001--global-search-returns-matching-records-or-empty-view--by-entity) | Global search returns matching records or empty view — by entity | Global search | P2 | Regression | Auto-UI | Active | 9 |
+<!-- /generated:summary -->
 
 ## Test cases
 

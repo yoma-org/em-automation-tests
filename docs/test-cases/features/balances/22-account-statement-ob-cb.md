@@ -2,7 +2,8 @@
 
 [← Test case index](../../README.md)
 
-**Source sheet(s):** Acc Statement - OB & CB · **Source rows:** 222 → **11 test cases** after merging 211 duplicates / data variants.  
+<!-- generated:summary (npm run cases:build) — edit the test cases below, not this block -->
+**Test cases:** 11 (+211 data-variant rows)  
 **Priority:** P1 11 · P2 0 · P3 0 · **★ Critical:** 11 · **Smoke:** 2 · **E2E:** 9 · **Auto:** 11 · **Manual:** 0
 
 ## Summary
@@ -20,6 +21,7 @@
 | [OB-ACS-009](#-ob-acs-009--account-statement-obcb--one-transaction-type-followed-by-another) | ★ Account statement OB/CB — one transaction type followed by another | Account statement OB/CB – sequential pairs | P1 | E2E · Regression | Auto-UI+API | Active | 15 |
 | [OB-ACS-010](#-ob-acs-010--account-2-users-debit-fullover-balance-concurrently--second-is-refused) | ★ Account: 2 users debit full/over balance concurrently — second is refused | Account concurrency – overdraw protection | P1 | Regression | Auto-API | Active | 8 |
 | [OB-ACS-011](#-ob-acs-011--account-2-users-debit-within-balance-concurrently--both-allowed) | ★ Account: 2 users debit within balance concurrently — both allowed | Account concurrency – overdraw protection | P1 | Regression | Auto-API | Active | 4 |
+<!-- /generated:summary -->
 
 ## Test cases
 

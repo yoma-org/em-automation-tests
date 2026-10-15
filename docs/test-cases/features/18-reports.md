@@ -2,7 +2,8 @@
 
 [← Test case index](../README.md)
 
-**Source sheet(s):** Reports · **Source rows:** 60 → **35 test cases** after merging 25 duplicates / data variants.  
+<!-- generated:summary (npm run cases:build) — edit the test cases below, not this block -->
+**Test cases:** 35 (+25 data-variant rows)  
 **Priority:** P1 4 · P2 27 · P3 4 · **★ Critical:** 4 · **Smoke:** 2 · **E2E:** 3 · **Auto:** 35 · **Manual:** 0 · **Review:** 3
 
 ## Summary
@@ -44,6 +45,7 @@
 | [RPT-033](#rpt-033--assign-unknown-received-log-lists-reassigned-rvs-sorted-by-rv-number) | Assign Unknown Received Log lists reassigned RVs sorted by RV number | Assign Unknown Received Log | P2 | E2E · Regression | Auto-UI+API | Active |  |
 | [RPT-034](#rpt-034--search-assign-unknown-received-log-by-rv-number) | Search Assign Unknown Received Log by RV number | Assign Unknown Received Log | P3 | Regression | Auto-UI | Active |  |
 | [RPT-035](#rpt-035--export-assign-unknown-received-log-to-excel) | Export Assign Unknown Received Log to Excel | Assign Unknown Received Log | P2 | Regression | Auto-UI | Active |  |
+<!-- /generated:summary -->
 
 ## Test cases
 

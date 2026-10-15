@@ -2,7 +2,8 @@
 
 [← Test case index](../README.md)
 
-**Source sheet(s):** 1Inv 2RV, 1RV 2Inv · **Source rows:** 73 → **7 test cases** after merging 66 duplicates / data variants.  
+<!-- generated:summary (npm run cases:build) — edit the test cases below, not this block -->
+**Test cases:** 7 (+66 data-variant rows)  
 **Priority:** P1 7 · P2 0 · P3 0 · **★ Critical:** 7 · **Smoke:** 0 · **E2E:** 7 · **Auto:** 7 · **Manual:** 0 · **Review:** 1
 
 ## Summary
@@ -16,6 +17,7 @@
 | [CONC-005](#-conc-005--1-invoice-partial--concurrent-full-scla-scla-rejected-api-invalid-amount-matrix) | ★ 1 invoice, partial + concurrent full SCLA: SCLA rejected (API Invalid Amount) (matrix) | 1Inv2RV - partial vs SCLA | P1 | E2E · Regression | Auto-API | Review | 5 |
 | [CONC-006](#-conc-006--1-unknown-rv-identified-by-2-users-concurrently-2nd-asked-to-refresh-matrix) | ★ 1 Unknown RV identified by 2 users concurrently: 2nd asked to refresh (matrix) | 1RV2Inv - payer identify | P1 | E2E · Regression | Auto-API | Active | 2 |
 | [CONC-007](#-conc-007--1-unknown-rv-assigned-to-invoices-by-2-users-concurrently-2nd-asked-to-refresh-matrix) | ★ 1 Unknown RV assigned to invoices by 2 users concurrently: 2nd asked to refresh (matrix) | 1RV2Inv - invoice assign | P1 | E2E · Regression | Auto-API | Active | 16 |
+<!-- /generated:summary -->
 
 ## Test cases
 

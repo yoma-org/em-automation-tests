@@ -2,7 +2,8 @@
 
 [← Test case index](../README.md)
 
-**Source sheet(s):** Contacts · **Source rows:** 45 → **32 test cases** after merging 13 duplicates / data variants.  
+<!-- generated:summary (npm run cases:build) — edit the test cases below, not this block -->
+**Test cases:** 32 (+13 data-variant rows)  
 **Priority:** P1 13 · P2 12 · P3 7 · **★ Critical:** 8 · **Smoke:** 1 · **E2E:** 8 · **Auto:** 32 · **Manual:** 0
 
 ## Summary
@@ -41,6 +42,7 @@
 | [CON-030](#con-030--edit-own-note-on-contact) | Edit own note on contact | Contact notes | P2 | Regression | Auto-UI | Active |  |
 | [CON-031](#con-031--user-cannot-edit-another-users-contact-note-no-edit-button) | User cannot edit another user's contact note (no edit button) | Contact notes | P2 | Regression | Auto-UI | Active |  |
 | [CON-032](#con-032--pressing-enter-key-does-not-submit-contact-note) | Pressing Enter key does not submit contact note | Contact notes | P3 | Regression | Auto-UI | Active |  |
+<!-- /generated:summary -->
 
 ## Test cases
 

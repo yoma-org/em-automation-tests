@@ -2,7 +2,8 @@
 
 [← Test case index](../README.md)
 
-**Source sheet(s):** UO · **Source rows:** 29 → **28 test cases** after merging 1 duplicates / data variants.  
+<!-- generated:summary (npm run cases:build) — edit the test cases below, not this block -->
+**Test cases:** 28 (+1 data-variant rows)  
 **Priority:** P1 8 · P2 19 · P3 1 · **★ Critical:** 8 · **Smoke:** 2 · **E2E:** 5 · **Auto:** 28 · **Manual:** 0 · **Review:** 2
 
 ## Summary
@@ -37,6 +38,7 @@
 | [UO-026](#uo-026--search-uo-invoices-by-keyword) | Search UO invoices by keyword | UO listing & filters | P2 | Regression | Auto-UI | Active |  |
 | [UO-027](#uo-027--filter-uo-invoices-by-month-and-year) | Filter UO invoices by month and year | UO listing & filters | P2 | Regression | Auto-UI | Active |  |
 | [UO-028](#uo-028--enter-key-does-not-submit-the-uo-create-form) | Enter key does not submit the UO create form | UO reading validation | P3 | Regression | Auto-UI | Active |  |
+<!-- /generated:summary -->
 
 ## Test cases
 

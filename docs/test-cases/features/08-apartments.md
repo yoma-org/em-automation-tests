@@ -2,7 +2,8 @@
 
 [← Test case index](../README.md)
 
-**Source sheet(s):** Apartments · **Source rows:** 55 → **33 test cases** after merging 22 duplicates / data variants.  
+<!-- generated:summary (npm run cases:build) — edit the test cases below, not this block -->
+**Test cases:** 33 (+22 data-variant rows)  
 **Priority:** P1 15 · P2 15 · P3 3 · **★ Critical:** 9 · **Smoke:** 3 · **E2E:** 11 · **Auto:** 33 · **Manual:** 0
 
 ## Summary
@@ -42,6 +43,7 @@
 | [APT-031](#apt-031--assign-previous-ownertenant-with-end-date--by-role-and-count) | Assign previous owner/tenant with end date — by role and count | Apartment owner/tenant | P2 | Regression | Auto-UI | Active | 4 |
 | [APT-032](#apt-032--change-current-ownertenant-to-previous-set-end-date--by-role) | Change current owner/tenant to previous (set end date) — by role | Apartment owner/tenant | P2 | Regression | Auto-UI | Active | 2 |
 | [APT-033](#apt-033--delete-apartment-ownertenant--by-role-and-status) | Delete apartment owner/tenant — by role and status | Apartment owner/tenant | P2 | Regression | Auto-UI | Active | 4 |
+<!-- /generated:summary -->
 
 ## Test cases
 

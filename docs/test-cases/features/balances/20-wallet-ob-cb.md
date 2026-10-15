@@ -2,7 +2,8 @@
 
 [← Test case index](../../README.md)
 
-**Source sheet(s):** Wallet - OB & CB · **Source rows:** 117 → **13 test cases** after merging 104 duplicates / data variants.  
+<!-- generated:summary (npm run cases:build) — edit the test cases below, not this block -->
+**Test cases:** 13 (+104 data-variant rows)  
 **Priority:** P1 13 · P2 0 · P3 0 · **★ Critical:** 13 · **Smoke:** 1 · **E2E:** 11 · **Auto:** 13 · **Manual:** 0
 
 ## Summary
@@ -22,6 +23,7 @@
 | [OB-WAL-011](#-ob-wal-011--wallet-obcb-continuity--one-transaction-type-followed-by-another) | ★ Wallet OB/CB continuity — one transaction type followed by another | Wallet OB/CB – sequential pairs | P1 | E2E · Regression | Auto-UI+API | Active | 30 |
 | [OB-WAL-012](#-ob-wal-012--wallet-2-users-debit-fullover-balance-concurrently--second-is-refused) | ★ Wallet: 2 users debit full/over balance concurrently — second is refused | Wallet concurrency – overdraw protection | P1 | Regression | Auto-API | Active | 6 |
 | [OB-WAL-013](#-ob-wal-013--wallet-2-users-debit-within-balance-concurrently--both-allowed) | ★ Wallet: 2 users debit within balance concurrently — both allowed | Wallet concurrency – overdraw protection | P1 | Regression | Auto-API | Active | 3 |
+<!-- /generated:summary -->
 
 ## Test cases
 

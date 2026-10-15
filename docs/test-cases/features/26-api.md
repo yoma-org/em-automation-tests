@@ -2,7 +2,8 @@
 
 [← Test case index](../README.md)
 
-**Source sheet(s):** API · **Source rows:** 75 → **27 test cases** after merging 48 duplicates / data variants.  
+<!-- generated:summary (npm run cases:build) — edit the test cases below, not this block -->
+**Test cases:** 27 (+48 data-variant rows)  
 **Priority:** P1 11 · P2 14 · P3 2 · **★ Critical:** 11 · **Smoke:** 4 · **E2E:** 7 · **Auto:** 27 · **Manual:** 0 · **Review:** 6
 
 ## Summary
@@ -36,6 +37,7 @@
 | [API-025](#api-025--get-invoice-pdf-by-id) | Get invoice PDF by ID | PDF printouts | P2 | Regression | Auto-API | Active |  |
 | [API-026](#api-026--get-receipt-pdf-rvjvcn-by-id) | Get receipt PDF (RV/JV/CN) by ID | PDF printouts | P2 | Regression | Auto-API | Active |  |
 | [API-027](#api-027--get-apartment-statement-pdf-by-apartment-month-currency--by-statement-type) | Get apartment statement PDF by apartment, month, currency — by statement type | PDF printouts | P2 | Regression | Auto-API | Active | 3 |
+<!-- /generated:summary -->
 
 ## Test cases
 

@@ -6,7 +6,10 @@
   "directories": {
     "doc": "docs"
   },
-  "scripts": {},
+  "scripts": {
+    "cases:build": "node scripts/test-cases.mjs",
+    "cases:check": "node scripts/test-cases.mjs --check"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

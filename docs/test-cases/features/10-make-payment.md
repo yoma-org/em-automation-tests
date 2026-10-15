@@ -2,7 +2,8 @@
 
 [← Test case index](../README.md)
 
-**Source sheet(s):** Make Payment · **Source rows:** 21 → **14 test cases** after merging 7 duplicates / data variants.  
+<!-- generated:summary (npm run cases:build) — edit the test cases below, not this block -->
+**Test cases:** 14 (+17 data-variant rows)  
 **Priority:** P1 13 · P2 0 · P3 1 · **★ Critical:** 13 · **Smoke:** 4 · **E2E:** 13 · **Auto:** 14 · **Manual:** 0 · **Review:** 1
 
 ## Summary
@@ -23,6 +24,7 @@
 | [PAY-012](#-pay-012--assign-unknown-received-rv-fully-to-apartment-deposit-no-invoice) | ★ Assign Unknown Received RV fully to apartment deposit (no invoice) | Unknown RV assign - deposit only | P1 | E2E · Regression | Auto-UI+API | Active | 4 |
 | [PAY-013](#pay-013--make-payment-is-not-submitted-by-pressing-enter-key) | Make Payment is not submitted by pressing Enter key | Make payment - form validation | P3 | Regression | Auto-UI | Active |  |
 | [PAY-014](#-pay-014--make-payment-for-apartment-invoice-with-cheque-method) | ★ Make payment for apartment invoice with Cheque method | Make payment - method & account | P1 | E2E · Regression | Auto-UI+API | Review |  |
+<!-- /generated:summary -->
 
 ## Test cases
 

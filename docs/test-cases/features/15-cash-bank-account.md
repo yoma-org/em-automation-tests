@@ -2,7 +2,8 @@
 
 [← Test case index](../README.md)
 
-**Source sheet(s):** Cash and Bank Account · **Source rows:** 25 → **20 test cases** after merging 5 duplicates / data variants.  
+<!-- generated:summary (npm run cases:build) — edit the test cases below, not this block -->
+**Test cases:** 20 (+5 data-variant rows)  
 **Priority:** P1 4 · P2 14 · P3 2 · **★ Critical:** 2 · **Smoke:** 1 · **E2E:** 4 · **Auto:** 20 · **Manual:** 0 · **Review:** 2
 
 ## Summary
@@ -29,6 +30,7 @@
 | [CBA-018](#cba-018--view-all-cash--bank-accounts-in-list) | View all Cash & Bank accounts in list | Account - list | P2 | Regression | Auto-UI | Active |  |
 | [CBA-019](#cba-019--search-accounts-by-name-bank-number-type-currency-or-balance) | Search accounts by name, bank, number, type, currency or balance | Account - list | P2 | Regression | Auto-UI | Active |  |
 | [CBA-020](#cba-020--sort-account-list-by-account-name) | Sort account list by account name | Account - list | P3 | Regression | Auto-UI | Active |  |
+<!-- /generated:summary -->
 
 ## Test cases
 

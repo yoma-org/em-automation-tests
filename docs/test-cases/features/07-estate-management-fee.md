@@ -2,7 +2,8 @@
 
 [← Test case index](../README.md)
 
-**Source sheet(s):** EM · **Source rows:** 17 → **17 test cases** after merging 0 duplicates / data variants.  
+<!-- generated:summary (npm run cases:build) — edit the test cases below, not this block -->
+**Test cases:** 17  
 **Priority:** P1 6 · P2 10 · P3 1 · **★ Critical:** 6 · **Smoke:** 3 · **E2E:** 6 · **Auto:** 17 · **Manual:** 0
 
 ## Summary
@@ -26,6 +27,7 @@
 | [EMF-015](#emf-015--filter-em-by-month-and-year) | Filter EM by month and year | EM listing & filters | P2 | Regression | Auto-UI | Active |  |
 | [EMF-016](#-emf-016--approving-current-month-debit-note-during-em-import-keeps-dnco-ref-numbering-in-order) | ★ Approving current-month debit note during EM import keeps DN/co-ref numbering in order | Approval during import | P1 | E2E · Regression | Auto-API | Active |  |
 | [EMF-017](#-emf-017--approving-previous-month-debit-note-during-em-import-keeps-numbering-consistent) | ★ Approving previous-month debit note during EM import keeps numbering consistent | Approval during import | P1 | E2E · Regression | Auto-API | Active |  |
+<!-- /generated:summary -->
 
 ## Test cases
 
@@ -474,7 +476,7 @@ User needs to login the system first
 
 | Priority | Suites | Automation | Status | Source |
 |---|---|---|---|---|
-| P1 | E2E · Regression | Auto-API | Active — Source src_id is a section label | EM r22 (Debit Note is approved  during import.) |
+| P1 | E2E · Regression | Auto-API | Active | EM r22 |
 
 **Preconditions:**
 
@@ -492,7 +494,7 @@ User needs to login the system first
 
 | Priority | Suites | Automation | Status | Source |
 |---|---|---|---|---|
-| P1 | E2E · Regression | Auto-API | Active — Source src_id is a section label | EM r23 (Debit Note is approved  during import.) |
+| P1 | E2E · Regression | Auto-API | Active | EM r23 |
 
 **Preconditions:**
 

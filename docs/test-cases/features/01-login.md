@@ -2,7 +2,8 @@
 
 [← Test case index](../README.md)
 
-**Source sheet(s):** Login · **Source rows:** 7 → **6 test cases** after merging 1 duplicates / data variants.  
+<!-- generated:summary (npm run cases:build) — edit the test cases below, not this block -->
+**Test cases:** 6 (+1 data-variant rows)  
 **Priority:** P1 1 · P2 2 · P3 3 · **★ Critical:** 1 · **Smoke:** 1 · **E2E:** 0 · **Auto:** 6 · **Manual:** 0 · **Review:** 3
 
 ## Summary
@@ -15,6 +16,7 @@
 | [AUTH-004](#auth-004--required-field-error-when-email-is-blank) | Required-field error when email is blank | Login validation | P3 | Regression | Auto-UI | Active |  |
 | [AUTH-005](#auth-005--required-field-error-when-password-is-blank) | Required-field error when password is blank | Login validation | P3 | Regression | Auto-UI | Review |  |
 | [AUTH-006](#auth-006--error-when-password-is-shorter-than-6-characters) | Error when password is shorter than 6 characters | Login validation | P3 | Regression | Auto-UI | Review |  |
+<!-- /generated:summary -->
 
 ## Test cases
 

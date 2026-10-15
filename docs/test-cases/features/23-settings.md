@@ -2,7 +2,8 @@
 
 [← Test case index](../README.md)
 
-**Source sheet(s):** Setting · **Source rows:** 74 → **50 test cases** after merging 24 duplicates / data variants.  
+<!-- generated:summary (npm run cases:build) — edit the test cases below, not this block -->
+**Test cases:** 50 (+24 data-variant rows)  
 **Priority:** P1 3 · P2 43 · P3 4 · **★ Critical:** 3 · **Smoke:** 1 · **E2E:** 18 · **Auto:** 50 · **Manual:** 0 · **Review:** 4
 
 ## Summary
@@ -59,6 +60,7 @@
 | [SET-048](#set-048--user-changes-own-password-session-stays-active-new-password-needed-next-login) | User changes own password; session stays active, new password needed next login | Password management | P2 | Regression | Auto-UI | Active | 2 |
 | [SET-049](#set-049--non-admin-user-cannot-edit-or-change-an-admin-password) | Non-admin user cannot edit or change an admin password | Password management | P2 | Regression | Auto-UI | Active |  |
 | [SET-050](#-set-050--create-role-with-permissions-and-categories-assigned-user-is-limited-to-them) | ★ Create role with permissions and categories; assigned user is limited to them | Role | P1 | E2E · Regression | Auto-UI+API | Active |  |
+<!-- /generated:summary -->
 
 ## Test cases
 

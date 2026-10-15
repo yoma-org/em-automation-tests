@@ -2,7 +2,8 @@
 
 [← Test case index](../README.md)
 
-**Source sheet(s):** Dashboard · **Source rows:** 25 → **8 test cases** after merging 17 duplicates / data variants.  
+<!-- generated:summary (npm run cases:build) — edit the test cases below, not this block -->
+**Test cases:** 8 (+18 data-variant rows)  
 **Priority:** P1 6 · P2 2 · P3 0 · **★ Critical:** 4 · **Smoke:** 3 · **E2E:** 2 · **Auto:** 8 · **Manual:** 0
 
 ## Summary
@@ -17,6 +18,7 @@
 | [DASH-006](#dash-006--negative-net-cash-shown-in-red-within-brackets--by-currency) | Negative net cash shown in red within brackets — by currency | Net cash | P2 | Regression | Auto-UI | Active | 2 |
 | [DASH-007](#dash-007--dashboard-wallet--deposit-net-amounts--by-currency--period) | Dashboard Wallet & Deposit net amounts — by currency × period | Wallet & Deposit | P1 | Regression | Auto-UI+API | Active | 6 |
 | [DASH-008](#dash-008--negative-wallet--deposit-total-shown-in-red-within-brackets--by-currency) | Negative Wallet & Deposit total shown in red within brackets — by currency | Wallet & Deposit | P2 | Regression | Auto-UI | Active | 2 |
+<!-- /generated:summary -->
 
 ## Test cases
 
